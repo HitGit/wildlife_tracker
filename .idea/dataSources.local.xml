@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="dataSourceStorageLocal">
+    <data-source name="PostgreSQL - wildlife_tracker_development@localhost" uuid="28f379d7-3089-49c5-aa17-05e01473e94c">
+      <secret-storage>master_key</secret-storage>
+      <user-name>postgres</user-name>
+      <schema-pattern>wildlife_tracker_development.pg_catalog wildlife_tracker_development.public</schema-pattern>
+      <default-schemas>wildlife_tracker_development.pg_catalog wildlife_tracker_development.public</default-schemas>
+    </data-source>
+  </component>
+</project>
