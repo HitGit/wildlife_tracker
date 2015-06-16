@@ -4,8 +4,6 @@ class SpeciesController < ApplicationController
     @allspecies = Species.all
     @species = Species.new
     render('species/index.html.erb')
-
-
   end
 
   def show
@@ -49,7 +47,6 @@ class SpeciesController < ApplicationController
     @species.destroy
     render('species/destroy.html.erb')
     end
-
 
 
 end

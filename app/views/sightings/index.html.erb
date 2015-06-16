@@ -1,0 +1,31 @@
+<h1>Species sightings</h1>
+<table>
+<% last_species_id = nil %>
+  <% @sightings.each do |sighting| %>
+  <% if last_species_id != sighting.species_id %>
+
+    <tr class="species_start">
+      <td colspan="4">
+        <h1><%= sighting.species.name %></h1>
+      </td>
+    </tr>
+  <tr>
+    <th>Date</th>
+    <th>Number</th>
+    <th>Lat</th>
+    <th>Long</th>
+  </tr>
+  <% end %>
+    <tr>
+      <td><%= sighting.date %></td>
+      <td><%= sighting.number %></td>
+      <td><%= sighting.latitude %></td>
+      <td><%= sighting.longitude %></td>
+  </tr>
+      <% last_species_id = sighting.species_id %>
+  <% end %>
+</table>
+<br>
+<a href="/species">Return to species listing</a>
+
+

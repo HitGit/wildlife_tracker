@@ -1,0 +1,15 @@
+<form action="/species/<%= @sighting.species.id %>/sightings" method="post">
+  <label for="sighting_date">sighting date</label>
+  <input id="sighting_date" name="sighting[date]" type="date" value="<%= @sighting.date %>"><br>
+  <label for="sighting_number">sighting number</label>
+  <input id="sighting_number" name="sighting[number]" type="integer" value="<%=@sighting.number %>"><br>
+  <label for="latitude">latitude</label>
+  <input id="latitude" name="sighting[latitude]" type="number" value="<%= @sighting.latitude %>" min="-90" max="90" step="any"><br>
+  <label for="longitude">longitude</label>
+  <input id="longitude" name="sighting[longitude]" type="number" value="<%= @sighting.longitude %>" min="-180" max="180" step="any"><br>
+  <%= collection_select @sighting, :species_id, Species.all, :id, :name %>
+  <%= collection_select @sighting, :region_id, Region.all, :id, :name %>
+
+  <input type="submit">
+</form>
+
