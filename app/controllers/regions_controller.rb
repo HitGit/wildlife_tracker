@@ -7,4 +7,15 @@ class RegionsController < ApplicationController
   end
 
 
+  def new
+    @region = Region.new
+    render('regions/new.html.erb')
+  end
+
+
+  def show
+    @region = Region.find(params[:id])
+    render('regions/show.html.erb')
+  end
+
 end

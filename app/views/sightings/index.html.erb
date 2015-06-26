@@ -6,19 +6,19 @@
 
     <tr class="species_start">
       <td colspan="4">
-        <h1><%= sighting.species.name %></h1>
+        <h3><%= sighting.species.name %></h3>
       </td>
     </tr>
   <tr>
-    <th>Date</th>
+    <th align="left">Date</th>
     <th>Number</th>
-    <th>Lat</th>
-    <th>Long</th>
+    <th>Latitude</th>
+    <th>Longitude</th>
   </tr>
   <% end %>
     <tr>
       <td><%= sighting.date %></td>
-      <td><%= sighting.number %></td>
+      <td align="center"><%= sighting.number %></td>
       <td><%= sighting.latitude %></td>
       <td><%= sighting.longitude %></td>
   </tr>

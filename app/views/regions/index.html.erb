@@ -1,8 +1,9 @@
 <h1>Regions</h1>
 <ul>
   <% @regions.each do |region| %>
-  <li><a href="/regions/<%= region.id %>">Species name: <%= region.species.map{|x| x.name}.join(', ') %> <%= region.name %></a></li>
+  <li><a href="/regions/<%= region.id %>">Species name: <%= region.species.map{|x| x.name}.join(', ') %>, <%= region.name %></a></li>
   <% end %>
 </ul>
 
+<a href="/species">Return to species listing</a>
 

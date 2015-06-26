@@ -7,8 +7,8 @@
   <input id="latitude" name="sighting[latitude]" type="number" value="<%= @sighting.latitude %>" min="-90" max="90" step="any"><br>
   <label for="longitude">longitude</label>
   <input id="longitude" name="sighting[longitude]" type="number" value="<%= @sighting.longitude %>" min="-180" max="180" step="any"><br>
-  <%= collection_select @sighting, :species_id, Species.all, :id, :name %>
-  <%= collection_select @sighting, :region_id, Region.all, :id, :name %>
+  <%= collection_select :sighting, :species_id, Species.all, :id, :name %>
+  <%= collection_select :sighting, :region_id, Region.all, :id, :name %>
 
   <input type="submit">
 </form>

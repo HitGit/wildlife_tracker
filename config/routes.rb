@@ -6,6 +6,7 @@ Rails.application.routes.draw do
   match('species/:id', {:via => [:patch, :put], :to => 'species#update'})
   match('species/:id', {:via => :get, :to => 'species#show'})
   match('species/:id', {:via => :delete, :to => 'species#destroy'})
+
   match('/', {:via => :get, :to => 'species#index'})
 
   match('species/:id/sightings/new', {:via => :get, :to => 'sightings#new'})
@@ -16,7 +17,9 @@ Rails.application.routes.draw do
 
 
   match('regions', {:via => :get, :to => 'regions#index'})
-
+  match('regions/new', {:via => :get, :to => 'regions#new'})
+  match('regions/:id', {:via => :get, :to => 'regions#show'})
+  # match('regions/')
 
 
 end
